@@ -1,6 +1,9 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { getReadBook, saveReadBook } from "../Utility/localstorage";
+import { useEffect, useState } from "react";
+import ListedBooks from "../ListedBooks/ListedBooks";
 
 
 const BookDetails = () => {
@@ -8,9 +11,16 @@ const BookDetails = () => {
     const {bookId} = useParams();
     const idInt = parseInt(bookId);
     const book = books.find(book => book.bookId === idInt);
-    console.log(book); 
+    const [readBooks, setReadBooks] = useState([]); 
+
+    useEffect(() => {
+        const storedReadBooks = getReadBook();
+        setReadBooks(storedReadBooks);
+    },[])
 
    const handleReadBooks = () =>{
+    saveReadBook(idInt);
+    setReadBooks([...readBooks, book]);
     toast.success("You have read this book");
    }
     
@@ -68,6 +78,7 @@ const BookDetails = () => {
                 </div>
             </div>
             <ToastContainer></ToastContainer>
+            <ListedBooks books={readBooks}></ListedBooks>
         </div>
     );
 };
