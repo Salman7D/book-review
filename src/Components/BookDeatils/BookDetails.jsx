@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const BookDetails = () => {
@@ -9,7 +10,9 @@ const BookDetails = () => {
     const book = books.find(book => book.bookId === idInt);
     console.log(book); 
 
-   
+   const handleReadBooks = () =>{
+    toast.success("You have read this book");
+   }
     
     return (
         <div className="lg:flex lg:gap-12">
@@ -26,7 +29,7 @@ const BookDetails = () => {
                 <div className="lg:mb-4 lg:h-[1px] lg:w-[549px] bg-[#13131326]">
 
                 </div>
-                <p className="text-[#131313] text-base font-normal lg:mb-6">Review: <span className="text-[#131313B3] text-base font-normal">{book.review}</span></p>
+                <p className="text-[#131313] text-base font-normal lg:mb-6 lg:w-[549px]">Review: <span className="text-[#131313B3] text-base font-normal">{book.review}</span></p>
 
                 <div className="lg:flex lg:gap-4">
                     <p className="text-[#131313] text-base font-bold">Tag</p>
@@ -60,10 +63,11 @@ const BookDetails = () => {
                 </div>
                 
                 <div className="flex gap-4 lg:mt-8">
-                    <button className="btn btn-ghost text-black text-lg font-semibold rounded-lg border border-solid border-[#1313134D]">Read</button>
+                    <button onClick={handleReadBooks} className="btn btn-ghost text-black text-lg font-semibold rounded-lg border border-solid border-[#1313134D]">Read</button>
                     <button className="btn btn-ghost text-white text-lg font-semibold rounded-lg bg-[#50B1C9] ">Wishlist</button>
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
