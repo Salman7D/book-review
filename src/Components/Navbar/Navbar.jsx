@@ -1,3 +1,5 @@
+import { Link, NavLink } from "react-router-dom";
+
 const Navbar = () => {
     return (
 //         <div>
@@ -37,7 +39,7 @@ const Navbar = () => {
 // </header>
 //         </div>
 
-<div className="navbar bg-base-100 p-10">
+<div className="navbar bg-base-100 p-10 lg:mb-[52px]">
 <div className="navbar-start">
   <div className="dropdown">
     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -45,40 +47,52 @@ const Navbar = () => {
     </div>
     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 gap-2">
     <li className="flex">
-        <a rel="noopener noreferrer" href="#" className="flex items-center px-3 text-[#23BE0A] border border-solid  border-[#23BE0A] rounded-lg text-lg font-normal">Home</a>   
+    <NavLink to="/" className={({isActive}) => 
+            isActive ? "border border-solid  border-[#23BE0A] rounded-lg text-[#23BE0A]" : "text-lg font-normal"
+        }>Home</NavLink>   
     </li>
     <li className="flex">
-        <a rel="noopener noreferrer" href="#" className="flex items-center px-3 text-[#23BE0A] border border-solid  border-[#23BE0A] rounded-lg text-lg font-normal">Home</a>   
+    <NavLink to="/listedbooks" className={({isActive}) => 
+            isActive ? "border border-solid  border-[#23BE0A] rounded-lg text-[#23BE0A]" : "text-lg font-normal"
+        }>Listed Books</NavLink>   
     </li>
     <li className="flex">
-        <a rel="noopener noreferrer" href="#" className="flex items-center px-3 text-[#23BE0A] border border-solid  border-[#23BE0A] rounded-lg text-lg font-normal">Home</a>   
+    <NavLink to="/pageread" className={({isActive}) => 
+            isActive ? "border border-solid  border-[#23BE0A] rounded-lg text-[#23BE0A]" : "text-lg font-normal"
+        }>Pages to Read</NavLink>  
     </li>
     <li className="flex">
-        <a rel="noopener noreferrer" href="#" className="flex items-center px-3 text-[#23BE0A] border border-solid  border-[#23BE0A] rounded-lg text-lg font-normal">Home</a>   
+        <a className="flex items-center px-3 text-[#23BE0A] border border-solid  border-[#23BE0A] rounded-lg text-lg font-normal">Home</a>   
     </li>
     <li className="flex">
-        <a rel="noopener noreferrer" href="#" className="flex items-center px-3 text-[#23BE0A] border border-solid  border-[#23BE0A] rounded-lg text-lg font-normal">Home</a>   
+        <a className="flex items-center px-3 text-[#23BE0A] border border-solid  border-[#23BE0A] rounded-lg text-lg font-normal">Home</a>   
     </li>
     </ul>
   </div>
-  <a className="btn btn-ghost text-xl"><p className="text-3xl font-bold">Book Vibe</p></a>
+  <Link to="/" className="btn btn-ghost text-xl"><p className="text-3xl font-bold">Book Vibe</p></Link>
 </div>
 <div className="navbar-center hidden lg:flex">
   <ul className="menu menu-horizontal px-1 gap-2">
   <li className="flex">
-        <a rel="noopener noreferrer" href="#" className="flex items-center px-3 text-[#23BE0A] border border-solid  border-[#23BE0A] rounded-lg text-lg font-normal">Home</a>   
+        <NavLink to="/" className={({isActive}) => 
+            isActive ? " border border-solid  border-[#23BE0A] rounded-lg text-[#23BE0A]" : "text-lg font-normal"
+        }>Home</NavLink>   
     </li>
   <li className="flex">
-        <a rel="noopener noreferrer" href="#" className="flex items-center px-3 text-[#23BE0A] border border-solid  border-[#23BE0A] rounded-lg text-lg font-normal">Home</a>   
+  <NavLink to="/listedbooks" className={({isActive}) => 
+            isActive ? " border border-solid  border-[#23BE0A] rounded-lg text-[#23BE0A]" : "text-lg font-normal"
+        }>Listed Books</NavLink>
     </li>
   <li className="flex">
-        <a rel="noopener noreferrer" href="#" className="flex items-center px-3 text-[#23BE0A] border border-solid  border-[#23BE0A] rounded-lg text-lg font-normal">Home</a>   
+  <NavLink to="/pageread" className={({isActive}) => 
+            isActive ? " border border-solid  border-[#23BE0A] rounded-lg text-[#23BE0A]" : "text-lg font-normal"
+        }>Pages to Read</NavLink>  
     </li>
   <li className="flex">
-        <a rel="noopener noreferrer" href="#" className="flex items-center px-3 text-[#23BE0A] border border-solid  border-[#23BE0A] rounded-lg text-lg font-normal">Home</a>   
+        <a className="flex items-center px-3 text-[#23BE0A] border border-solid  border-[#23BE0A] rounded-lg text-lg font-normal">Home</a>   
     </li>
   <li className="flex">
-        <a rel="noopener noreferrer" href="#" className="flex items-center px-3 text-[#23BE0A] border border-solid  border-[#23BE0A] rounded-lg text-lg font-normal">Home</a>   
+        <a className="flex items-center px-3 text-[#23BE0A] border border-solid  border-[#23BE0A] rounded-lg text-lg font-normal">Home</a>   
     </li>
   </ul>
 </div>
