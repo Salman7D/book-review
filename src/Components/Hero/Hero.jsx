@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import book from '/src/assets/Images/pngwing 1.png'
 
 const Hero = () => {
@@ -8,7 +9,7 @@ const Hero = () => {
                     <div>
                     <h1 className="lg:mb-[48px] text-5xl font-bold text-[#131313]">Books to freshen up <br /> your bookshelf</h1>
                     
-                    <button className="btn btn-ghost rounded-lg bg-[#23BE0A] text-[#FFF] text-xl font-bold">View The List</button>
+                    <Link to="/listedbooks" className="btn btn-ghost rounded-lg bg-[#23BE0A] text-[#FFF] text-xl font-bold">View The List</Link>
                     </div>
                 </div>
                 </div>
