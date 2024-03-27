@@ -1,37 +1,37 @@
-import { useEffect, useState } from "react";
-import { Link, Outlet, useLoaderData } from "react-router-dom";
-import { getReadBook } from "../Utility/localstorage";
-import map from '/src/assets/Images/Frame2.png';
-import people from '/src/assets/Images/Frame3.png';
-import page from '/src/assets/Images/Frame4.png';
+import { useState } from "react";
+import { Link, Outlet, } from "react-router-dom";
+// import { getReadBook } from "../Utility/localstorage";
+// import map from '/src/assets/Images/Frame2.png';
+// import people from '/src/assets/Images/Frame3.png';
+// import page from '/src/assets/Images/Frame4.png';
 
 
 const ListedBooks = () => {
     const [tabIndex, setTabIndex] = useState(0);
 
-    const books = useLoaderData();
+    // const books = useLoaderData();
 
-    const [readingBooks, setReadingBooks] = useState([]);
-    useEffect(() => {
-        const storedReadBooks = getReadBook();
-        if(books.length > 0){
-
-
+    // const [readingBooks, setReadingBooks] = useState([]);
+    // useEffect(() => {
+    //     const storedReadBooks = getReadBook();
+    //     if(books.length > 0){
 
 
-            // const BooksListed = books.filter(book => storedReadBooks.includes(book.bookId))
+
+
+    //         // const BooksListed = books.filter(book => storedReadBooks.includes(book.bookId))
             
-            const booksListed = [];
-            for(const id of storedReadBooks){
-                const book = books.find(book => book.bookId === id);
-                if(book){
-                    booksListed.push(book);
-                }
-            }
-            setReadingBooks(booksListed);
-            // console.log(books, storedReadBooks, booksListed); 
-        }
-    },[])
+    //         const booksListed = [];
+    //         for(const id of storedReadBooks){
+    //             const book = books.find(book => book.bookId === id);
+    //             if(book){
+    //                 booksListed.push(book);
+    //             }
+    //         }
+    //         setReadingBooks(booksListed);
+    //         // console.log(books, storedReadBooks, booksListed); 
+    //     }
+    // },[])
     return (
         <div className="lg:ml-[100px]">
             <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap dark:bg-gray-100 dark:text-gray-800">
@@ -58,7 +58,7 @@ const ListedBooks = () => {
 </div>
 <Outlet></Outlet>
             
-            {
+            {/* {
                 readingBooks.map(book => <div key={book.bookId}>
                     
                     <div>
@@ -103,11 +103,11 @@ const ListedBooks = () => {
                                                 <p className="text-[#328EFF]">Category: {book.category}</p>
                                             </div>
                                             <div className="rounded-3xl bg-[#FFAC3326] lg:p-2">
-                                                <p className="text-[#FFAC33]">Category: {book.category}</p>
+                                                <p className="text-[#FFAC33]">Rating: {book.rating}</p>
                                             </div>
-                                            <div className="rounded-3xl bg-[#23BE0A] lg:p-2">
-                                                <p className="text-[#FFF]">Category: {book.category}</p>
-                                            </div>
+                                            <button className="btn btn-ghost rounded-3xl bg-[#23BE0A] lg:p-2">
+                                                <p className="text-[#FFF]">View Details</p>
+                                            </button>
                                         </div>
 
 
@@ -117,7 +117,7 @@ const ListedBooks = () => {
                     </div>
                     
                 </div>)
-            }
+            } */}
         </div>
 
     );
