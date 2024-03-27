@@ -6,11 +6,15 @@ import BookDetails from "../Components/BookDeatils/BookDetails";
 import PageRead from "../Components/PageRead/PageRead";
 import ReadBooks from "../Components/ReadBooks/ReadBooks";
 import Wishlist from "../Components/Wishlist/Wishlist";
+import ErrorPage from "../Components/ErrorPage/ErrorPage";
+import MostPopularBooks from "../Components/MostPopularBooks/MostPopularBooks";
+import BestSellerBooks from "../Components/BestSellerBooks/BestSellerBooks";
 
 export const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [{
   
         path: "/",
@@ -42,7 +46,15 @@ export const router = createBrowserRouter([
       {
         path: "/pageread",
         element: <PageRead></PageRead>,
-        loader: () => fetch('/books.json'),
+        loader: () => fetch('/books.json'), 
+      },
+      {
+        path: "/mostpopularbooks",
+        element: <MostPopularBooks></MostPopularBooks>
+      },
+      {
+        path: "/bestsellerbooks",
+        element: <BestSellerBooks></BestSellerBooks>
       }
     ]
       
