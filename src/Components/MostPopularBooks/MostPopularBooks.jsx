@@ -5,8 +5,8 @@ import page from '/src/assets/Images/Frame4.png';
 const MostPopularBooks = () => {
     return (
         <div>
-            <div>
-                <p>Our Most Popular Books</p>
+            <div className='lg:ml-48 flex justify-center items-center rounded-2xl bg-[#1313130D] w-[500px] ml-5 lg:w-[1169px] lg:h-[100px]'>
+                <p className='text-[#131313] text-3xl font-bold'>Our Best Seller Book</p>
             </div>
             
 
