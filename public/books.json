@@ -115,5 +115,45 @@
       "tags": ["Dystopian", "Adventure"],
       "publisher": "Scholastic Press",
       "yearOfPublishing": 2008
-    }
+    },
+    {
+      "bookId": 10,
+      "bookName": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "image": "https://i.ibb.co/2tVpMFK/p4.png",
+      "review": "J.D. Salinger's The Catcher in the Rye is a provocative coming-of-age novel that continues to resonate with readers of all ages. Narrated by the disillusioned teenager Holden Caulfield, the novel offers a raw and unfiltered glimpse into the mind of an adolescent grappling with alienation, identity, and the phoniness of the adult world. As Holden embarks on a journey of self-discovery through the streets of New York City, readers are invited to confront the universal struggles of adolescence and the search for authenticity in a world filled with hypocrisy and disillusionment.",
+      "totalPages": 224,
+      "rating": 4.3,
+      "category": "Coming-of-Age Fiction",
+      "tags": ["Coming-of-Age", "Existential"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 1951
+      },
+      {
+        "bookId": 11,
+        "bookName": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "image": "https://i.ibb.co/PztL7rX/p6.png",
+        "review": "J.R.R. Tolkien's The Hobbit is a timeless fantasy adventure that transports readers to the enchanting world of Middle-earth. Bilbo Baggins, a reluctant hobbit, is swept into an epic quest to reclaim the lost kingdom of Erebor from the fearsome dragon Smaug. Joined by a band of dwarves and the wise wizard Gandalf, Bilbo embarks on a journey fraught with danger, discovery, and magic. As they encounter trolls, goblins, and other fantastical creatures, readers are drawn into a richly imagined world filled with heroism, friendship, and the enduring power of courage. With its captivating storytelling and vivid imagery, The Hobbit continues to captivate readers of all ages, inspiring generations with its timeless tale of adventure and redemption.",
+        "totalPages": 310,
+        "rating": 4.9,
+        "category": "Fantasy",
+        "tags": ["Fantasy", "Adventure"],
+        "publisher": "Allen & Unwin",
+        "yearOfPublishing": 1937
+        },
+        {
+          "bookId": 12,
+          "bookName": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "image": "https://i.ibb.co/93qVgnr/p5.png",
+          "review": "Jane Austen's Pride and Prejudice is a delightful romance novel that continues to captivate readers with its wit, charm, and social satire. Set in early 19th-century England, the novel follows the spirited Elizabeth Bennet as she navigates the complexities of love and marriage in a society governed by strict social conventions. As Elizabeth clashes with the proud and enigmatic Mr. Darcy, readers are treated to a witty and engaging exploration of misunderstandings, first impressions, and the transformative power of love. With its timeless themes and memorable characters, Pride and Prejudice remains a beloved classic that enchants readers of every generation.",
+          "totalPages": 279,
+          "rating": 4.6,
+          "category": "Romantic Fiction",
+          "tags": ["Romance", "Satire"],
+          "publisher": "T. Egerton, Whitehall",
+          "yearOfPublishing": 1813
+          }
+    
   ]

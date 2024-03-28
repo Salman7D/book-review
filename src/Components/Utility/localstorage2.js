@@ -23,19 +23,6 @@ const saveWishlist = bookId => {
         toast.error("Already Added in the wishlist");
     }
 
-    // if(!exists){
-    //     return toast.error("Book already added");
-    // }
-    // else if (exists){
-    //     return toast.success("Book added wishlist successfully");
-    // }
-    // else{
-    //     storedWishlist.push(bookId);
-    //      localStorage.setItem('wishlist', JSON.stringify(storedWishlist));
-    //     //  return toast.error("Book already added to wishlist");
-         
-    // }
-    // <ToastContainer></ToastContainer>
 }
 
 
