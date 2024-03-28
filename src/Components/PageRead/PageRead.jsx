@@ -1,5 +1,5 @@
-
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
+import PropTypes from "prop-types";
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { getReadBook } from '../Utility/localstorage';
 import { useLoaderData } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -7,9 +7,6 @@ import { useEffect, useState } from 'react';
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
 const getPath = (x, y, width, height) => {
-    if (isNaN(x) || isNaN(y) || isNaN(width) || isNaN(height)) {
-        return '';
-      }
   return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3}
   ${x + width / 2}, ${y}
   C${x + width / 2},${y + height / 3} ${x + (2 * width) / 3},${y + height} ${x + width}, ${y + height}
@@ -25,25 +22,6 @@ const TriangleBar = (props) => {
 
 
 const PageRead = () => {
-    // const storedReadBooks = getReadBook();
-
-    // // const data = storedReadBooks.map((page, index) => ({
-    // //     bookName: page.bookName,
-    // //     totalPages: page.totalPages,
-    // //     key: `cell-${index}`, // Add a unique key for each cell
-    // //   }));
-
-    // // let data = []
-    // // for(const page of storedReadBooks){
-    // //     let usingData = {
-    // //         name: page.bookName,
-    // //         pages: page.totalPages
-    // //     }
-    // //     data.push(usingData);
-    // // }
-    // console.log(storedReadBooks);
-
-
 
     const books = useLoaderData();
 
@@ -65,7 +43,8 @@ const PageRead = () => {
     },[])
 
     return (
-        <div>
+        <div style={{width: "100%", height: 300}}>
+            <ResponsiveContainer>
             <BarChart
       width={1000}
       height={300}
@@ -87,9 +66,20 @@ const PageRead = () => {
         // <Cell key={entry.key} fill={colors[index % colors.length]} />
         ))}
       </Bar>
+      
     </BarChart>
+    </ResponsiveContainer>
         </div>
     );
 };
+
+TriangleBar.propTypes = {
+    fill: PropTypes.string,
+    x: PropTypes.string,
+    y: PropTypes.string,
+    width: PropTypes.string,
+    height: PropTypes.string,
+}
+
 
 export default PageRead;
