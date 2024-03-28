@@ -62,10 +62,14 @@ const Navbar = () => {
         }>Pages to Read</NavLink>  
     </li>
     <li className="flex">
-        <a className="flex items-center px-3 text-[#23BE0A] border border-solid  border-[#23BE0A] rounded-lg text-lg font-normal">Home</a>   
+  <NavLink to="/mostpopularbooks" className={({isActive}) => 
+            isActive ? " border border-solid  border-[#23BE0A] rounded-lg text-[#23BE0A]" : "text-lg font-normal"
+        }>Most Popular Books</NavLink>  
     </li>
-    <li className="flex">
-        <a className="flex items-center px-3 text-[#23BE0A] border border-solid  border-[#23BE0A] rounded-lg text-lg font-normal">Home</a>   
+  <li className="flex">
+  <NavLink to="/bestsellerbooks" className={({isActive}) => 
+            isActive ? " border border-solid  border-[#23BE0A] rounded-lg text-[#23BE0A]" : "text-lg font-normal"
+        }>Best Seller Books</NavLink>  
     </li>
     </ul>
   </div>
